@@ -1,0 +1,13 @@
+.statisticsTitle {
+  font-size: 22px;
+}
+.statisticsItems {
+  margin: -20px -20px 20px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+.statisticsItem {
+  margin: 20px;
+}

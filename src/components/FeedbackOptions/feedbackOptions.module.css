@@ -1,0 +1,17 @@
+.buttons {
+  margin: -20px -20px 20px;
+}
+.button {
+  margin: 20px;
+  padding: 10px 15px;
+
+  border: 1px dashed black;
+  border-radius: 20px;
+
+  background-color: azure;
+  transition: background-color 2500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.button:hover,
+.button:focus {
+  background-color: rgb(181, 249, 249);
+}
