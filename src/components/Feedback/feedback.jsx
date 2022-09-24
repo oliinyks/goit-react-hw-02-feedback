@@ -17,7 +17,7 @@ class Feedback extends React.Component {
 
   onLeaveFeedback = e => {
     const currentState = e.target.name;
-
+	  // eslint-disable-next-line
     switch (currentState) {
       case 'good':
         this.setState(prevState => ({ good: prevState.good + 1 }));
