@@ -15,28 +15,13 @@ class Feedback extends React.Component {
     this.setState({ visible: true });
   };
 
-  onLeaveFeedback = e => {
-    const currentState = e.target.name;
-	  // eslint-disable-next-line
-    switch (currentState) {
-      case 'good':
-        this.setState(prevState => ({ good: prevState.good + 1 }));
-        break;
-      case 'neutral':
-        this.setState(prevState => ({ neutral: prevState.neutral + 1 }));
-        break;
-      case 'bad':
-        this.setState(prevState => ({ bad: prevState.bad + 1 }));
-        break;
-    }
+  onLeaveFeedback = option => {
+    this.setState(prevState => ({ [option]: prevState[option] + 1 }));
     this.show();
   };
 
   render() {
-    const { visible } = this.state;
-    const { good } = this.state;
-    const { neutral } = this.state;
-    const { bad } = this.state;
+    const { visible, good, neutral, bad } = this.state;
 
     const total = good + neutral + bad;
     const positivePercentage = Number.parseInt((good / total) * 100);
@@ -47,7 +32,10 @@ class Feedback extends React.Component {
         <p className={css.text}>
           {visible ? 'Thanks for your choice' : 'Please leave feedback'}
         </p>
-        <FeedbackOptions onLeaveFeedback={this.onLeaveFeedback} />
+        <FeedbackOptions
+          onLeaveFeedback={this.onLeaveFeedback}
+          options={['good', 'neutral', 'bad']}
+        />
 
         {visible && (
           <>
