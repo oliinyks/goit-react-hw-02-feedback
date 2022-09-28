@@ -8,6 +8,7 @@
   border: 1px dashed black;
   border-radius: 20px;
 
+  text-transform: capitalize;
   background-color: azure;
   transition: background-color 2500ms cubic-bezier(0.075, 0.82, 0.165, 1);
 }
