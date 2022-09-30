@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import FeedbackOptions from '../FeedbackOptions';
 import Statistics from '../Statistics';
 import Section from '../Section';
@@ -55,9 +54,4 @@ class App extends React.Component {
     );
   }
 }
-
-App.protoTypes = {
-  visible: PropTypes.bool.isRequired,
-};
-
 export default App;
